@@ -1,0 +1,10 @@
+#N canvas 300 385 431 94 10;
+#X declare -lib mrpeach;
+#X obj 9 8 r touchOSCdumpPack;
+#X obj 9 31 routeOSC \$1;
+#X obj 9 73 outlet;
+#X obj 124 8 import mrpeach;
+#X text 84 27 Receives a symbol as an argument and routes its control
+values into the output. MUST HAVE AN ARGUMENT.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

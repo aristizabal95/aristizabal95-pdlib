@@ -1,0 +1,12 @@
+#N canvas 0 22 329 124 10;
+#X obj 10 11 loadbang;
+#X msg 10 32 0.1;
+#X obj 10 53 osc~;
+#X obj 10 74 vtof;
+#X floatatom 10 94 5 0 0 0 - - -;
+#X text 101 9 VOLTAGE TO FLOAT;
+#X text 102 28 Outputs the signal value as a float;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;

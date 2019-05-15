@@ -1,0 +1,25 @@
+#N canvas 137 356 531 207 10;
+#X obj 11 72 osc~;
+#X obj 11 112 vtof;
+#X obj 14 134 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7740 1;
+#X obj 11 92 clip~ -0.5 0.5;
+#X msg 11 52 0.1;
+#X floatatom 11 175 5 0 0 0 - - -;
+#X obj 11 154 wait 1000;
+#X text 191 11 WAIT;
+#X text 192 30 only output values that are unchanged for the specified
+time in ms;
+#X text 191 64 Inlets;
+#X text 192 82 0 - monitored value;
+#X text 192 96 1 - time to check;
+#X text 193 132 0 - Static value;
+#X text 193 155 Arguments;
+#X text 192 116 Outlets;
+#X text 194 174 0 - time to check;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 6 0 5 0;

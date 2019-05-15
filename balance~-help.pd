@@ -1,0 +1,21 @@
+#N canvas 217 103 603 160 10;
+#X obj 36 41 osc~;
+#X msg 36 20 440;
+#X obj 36 64 balance~;
+#X obj 36 85 dac~;
+#X obj 84 45 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 247 11 Inlets;
+#X text 249 30 0 Receives left signal;
+#X text 249 44 1 Receives right signal;
+#X text 249 60 2 Value between -1 a 1 that indicates balance between
+both signals. Default value 0: equal balance between signals;
+#X text 249 100 Outlets;
+#X text 249 113 0 right balanced signal;
+#X text 249 128 1 left balanced signal;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 4 0 2 2;

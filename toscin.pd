@@ -1,0 +1,11 @@
+#N canvas 460 212 474 97 10;
+#X obj 6 7 r touchOSCdumpPack;
+#X obj 6 52 outlet;
+#X obj 40 74 outlet;
+#X text 126 5 Behaves like notein or ctlin: displays the control value
+(symbol) as well as the float(s) being received from the control value.
+;
+#X obj 6 28 list split 1;
+#X connect 0 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 1 2 0;

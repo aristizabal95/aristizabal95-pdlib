@@ -1,0 +1,95 @@
+#N canvas 288 87 651 517 10;
+#X obj 12 278 curvegen~;
+#X text 9 10 CURVE GENERATOR;
+#X obj 12 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 22 170 1;
+#X msg 32 191 2;
+#X msg 42 212 1000;
+#X obj 52 232 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 63 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 12 300 vtof;
+#X floatatom 12 320 5 0 0 0 - - -;
+#X text 10 132 Click me;
+#X text 9 29 Intended for envelope generators. This object generates
+a curve between two specified values. This curve can be linear (behaves
+like a line) or exponential.;
+#X text 10 111 Simple line from 1 to 2;
+#X obj 172 278 curvegen~;
+#X obj 172 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 182 170 1;
+#X msg 192 191 2;
+#X obj 212 232 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 223 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 172 300 vtof;
+#X floatatom 172 320 5 0 0 0 - - -;
+#X text 170 132 Click me;
+#X text 171 112 exponential line from 1 to 2;
+#X obj 75 153 loadbang;
+#X obj 285 153 loadbang;
+#X obj 372 278 curvegen~;
+#X obj 372 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 412 232 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 423 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 372 300 vtof;
+#X floatatom 372 320 5 0 0 0 - - -;
+#X text 370 132 Click me;
+#X obj 485 153 loadbang;
+#X text 371 112 exponential line from 2 to 1 (inverted curve);
+#X msg 382 170 2;
+#X msg 392 191 1;
+#X msg 402 212 2000;
+#X msg 202 212 2000;
+#X text 9 349 Inlets;
+#X text 9 364 0 - bang \, Trigger;
+#X text 9 377 1 - Initial value;
+#X text 9 391 2 - Objective Value;
+#X text 9 405 3 - Time to reach objective value;
+#X text 9 420 4 - [0 \, 1] 0 = line \, 1 = exponential;
+#X text 9 435 5 - bang \, reset;
+#X text 9 454 Outlets;
+#X text 9 474 0 - signal \, curve value;
+#X text 9 488 1 - bang triggered when reached the objective value;
+#X connect 0 0 8 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;
+#X connect 6 0 0 4;
+#X connect 7 0 0 5;
+#X connect 8 0 9 0;
+#X connect 13 0 19 0;
+#X connect 14 0 13 0;
+#X connect 15 0 13 1;
+#X connect 16 0 13 2;
+#X connect 17 0 13 4;
+#X connect 18 0 13 5;
+#X connect 19 0 20 0;
+#X connect 23 0 3 0;
+#X connect 23 0 4 0;
+#X connect 23 0 5 0;
+#X connect 24 0 15 0;
+#X connect 24 0 16 0;
+#X connect 24 0 37 0;
+#X connect 24 0 17 0;
+#X connect 25 0 29 0;
+#X connect 26 0 25 0;
+#X connect 27 0 25 4;
+#X connect 28 0 25 5;
+#X connect 29 0 30 0;
+#X connect 32 0 34 0;
+#X connect 32 0 35 0;
+#X connect 32 0 36 0;
+#X connect 32 0 27 0;
+#X connect 34 0 25 1;
+#X connect 35 0 25 2;
+#X connect 36 0 25 3;
+#X connect 37 0 13 3;

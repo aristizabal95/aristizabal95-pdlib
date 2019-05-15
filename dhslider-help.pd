@@ -1,0 +1,10 @@
+#N canvas 335 181 371 128 10;
+#X obj 14 -320 dhslider;
+#X text 14 -350 VARIABLE HORIZONTAL SLIDER;
+#X text 209 -348 Inlets;
+#X text 210 -330 0 - [0-1] Slider position;
+#X text 210 -315 1 - Floor value;
+#X text 210 -298 2 - Max value;
+#X text 210 -275 Outlets;
+#X text 210 -258 0 - Slider value;
+#X coords 0 128 1 127 150 80 0;

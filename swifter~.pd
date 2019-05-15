@@ -1,0 +1,23 @@
+#N canvas 383 122 375 259 10;
+#X obj 10 126 pack;
+#X msg 10 187 424 110;
+#X obj 31 87 loadbang;
+#X msg 10 146 set \$1 \$2;
+#X obj 19 167 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 31 107 110;
+#X obj 10 208 line~;
+#X obj 10 66 inlet;
+#X text 9 6 SWIFTER;
+#X text 10 20 Makes a change in values softer Ideal for removing jumping
+noise in numbers and sliders;
+#X obj 10 229 outlet~;
+#X connect 0 0 3 0;
+#X connect 1 0 6 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 0 1;
+#X connect 6 0 10 0;
+#X connect 7 0 0 0;

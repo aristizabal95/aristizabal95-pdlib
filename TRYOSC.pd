@@ -1,0 +1,24 @@
+#N canvas 753 436 623 514 10;
+#X declare -lib mrpeach;
+#X obj 7 27 touchOSC;
+#X obj 9 98 toscin;
+#X symbolatom 9 125 10 0 0 0 - - -;
+#X floatatom 25 149 5 0 0 0 - - -;
+#X floatatom 42 176 5 0 0 0 - - -;
+#X msg 7 7 192.168.0.6;
+#X obj 5 238 toscGet /3/xyM_r;
+#X floatatom 5 258 5 0 0 0 - - -;
+#X floatatom 98 258 5 0 0 0 - - -;
+#X text 94 8 Allows connection between pd and touchOSC. INLET: touchOSC
+ip \, to send data. MUST BE ONLY ONCE ON ANY PROJECT USING TOUCHOSC.
+;
+#X text 93 96 Allows you to see what control is being used and the
+values it outputs.;
+#X text 153 230 Allows you to route specific values from specific controls.
+;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;

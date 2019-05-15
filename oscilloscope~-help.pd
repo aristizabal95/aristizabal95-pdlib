@@ -1,0 +1,20 @@
+#N canvas 378 22 637 387 10;
+#X obj 27 -271 oscilloscope~;
+#X obj 27 -295 osc~;
+#X msg 27 -318 440;
+#X obj 27 -341 loadbang;
+#X text 198 -174 Turn on and set the amplitude to any value;
+#X text 208 -345 OSCILLOSCOPE;
+#X text 209 -319 Displays the signal continously with GEM;
+#X text 198 -146 Resolution sets the number of wavelengths to display
+;
+#X text 199 -125 Zoom zooms into the wave signal;
+#X text 199 -105 Displace moves the signal back or forth;
+#X text 199 -86 Hold stop the dsiplacement;
+#X text 198 -70 Frequency: 0 = find the frequency of signal \, 1 =
+use value given on 2nd inlet;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 2 0 0 1;
+#X connect 3 0 2 0;
+#X coords 0 387 1 386 160 120 0;

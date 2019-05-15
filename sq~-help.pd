@@ -1,0 +1,23 @@
+#N canvas 608 182 559 169 10;
+#X obj 18 76 sq~;
+#X msg 18 4 440;
+#X obj 33 54 osc~;
+#X obj 18 116 *~;
+#X obj 18 136 dac~;
+#X obj 36 98 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3300 1;
+#X msg 33 26 0.1;
+#X text 185 6 SQUARE WAVE GENERATOR WITH PULSE WIDTH MODULATION;
+#X text 185 26 Inlets;
+#X text 186 42 0 - (signal \, float) input frequency;
+#X text 186 57 1 - (signal \, float) [-1 \, 1] pwm range. default 0
+\, 0.5 period pulse;
+#X text 186 94 Outlets;
+#X text 186 107 0 - Square signal;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 3 1;
+#X connect 6 0 2 0;

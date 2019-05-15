@@ -1,0 +1,14 @@
+#N canvas 635 256 470 148 10;
+#X obj 20 47 osc~;
+#X obj 20 124 outlet~;
+#X obj 20 12 inlet~;
+#X text 105 13 PWM: varía el tamaño de los pulsos. Su valor debe
+ser entre -1 y 1;
+#X obj 20 83 >~;
+#X obj 64 47 clip~ -1 1;
+#X obj 64 12 inlet~;
+#X connect 0 0 4 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 1;
+#X connect 6 0 5 0;

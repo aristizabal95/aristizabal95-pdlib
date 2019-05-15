@@ -1,0 +1,33 @@
+#N canvas 877 256 557 278 10;
+#X obj 15 10 dumpOSC 8000;
+#X obj 15 30 s touchOSCdumpPack;
+#X text 145 4 Declares the connection between touchOSC and pd IMPORTANT:
+outcoming port must be 8000 and incoming port must be 9000;
+#X msg 61 75 9000;
+#X msg 16 178 connect 192.168.0.7 9000;
+#X msg 16 138 set connect \$1 \$2;
+#X obj 16 117 pack s f;
+#X obj 61 52 loadbang;
+#X obj 16 199 s touchOSCconnect;
+#X obj 16 74 inlet;
+#X obj 22 158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 159 bng 15 250 50 0 empty reconnect empty 17 7 0 10 -262144
+-1 -1;
+#X text 148 141 receives bang when a toscSend is created \, reconnecting
+the objects to the host;
+#X obj 23 96 symbol \$1;
+#X text 152 71 IP can be set by input message or by argument;
+#X connect 0 0 1 0;
+#X connect 3 0 6 1;
+#X connect 4 0 8 0;
+#X connect 5 0 4 0;
+#X connect 5 0 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 3 0;
+#X connect 7 0 13 0;
+#X connect 9 0 6 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 13 0 6 0;
+#X coords 0 0 1 1 85 60 0;
