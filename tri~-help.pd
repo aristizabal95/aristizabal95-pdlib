@@ -1,0 +1,14 @@
+#N canvas 145 64 276 183 10;
+#X obj 37 48 tri~;
+#X msg 37 25 440;
+#X obj 37 78 output~;
+#X text 132 12 TRIANGLE GENERATOR;
+#X text 133 35 Generates a triangle;
+#X text 134 53 Inlets;
+#X text 136 74 0 - Signal frecuency;
+#X text 136 93 1 - Signal phase;
+#X text 137 123 Outlets;
+#X text 137 141 0 - Signal;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;

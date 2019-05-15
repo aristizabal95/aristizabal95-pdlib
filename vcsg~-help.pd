@@ -1,0 +1,29 @@
+#N canvas 0 60 681 233 10;
+#X text 7 22 This patch allows you to continuously change the signal
+waveform between some of the most commonly used waveforms.;
+#X text 7 55 0 = Osc;
+#X text 7 70 1 = Triangle;
+#X text 6 85 2 = Sawtooth/phasor;
+#X text 6 100 3 = square;
+#X text 5 142 Inlets;
+#X text 5 161 0 - Frequency of the wave;
+#X text 5 179 1 - phase;
+#X text 5 199 2 - Waveform position;
+#X text 8 7 VARIABLE CONTINUOUS SIGNAL GENERATOR;
+#X text 6 118 4 = noise;
+#X obj 403 101 output~;
+#X obj 433 30 hsl 128 15 0 4 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 477 49 5 0 0 0 - - -;
+#X msg 403 9 220;
+#X obj 403 79 vcsg~;
+#X obj 430 58 sig~;
+#X obj 492 86 oscilloscope~;
+#X connect 12 0 13 0;
+#X connect 12 0 16 0;
+#X connect 14 0 15 0;
+#X connect 14 0 17 1;
+#X connect 15 0 11 0;
+#X connect 15 0 11 1;
+#X connect 15 0 17 0;
+#X connect 16 0 15 2;

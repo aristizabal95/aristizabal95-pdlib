@@ -19,7 +19,9 @@ PDOBJECTS = balance~.pd \
 						swifter~.pd \
 						vtof.pd \
 						wait.pd \
-						fmsynth~.pd
+						fmsynth~.pd \
+						tri~.pd \
+						vcsg~.pd \
 
 # example patches and related files, in the 'examples' subfolder
 EXAMPLES = bothtogether.pd
