@@ -18,7 +18,8 @@ PDOBJECTS = balance~.pd \
 						sq~.pd \
 						swifter~.pd \
 						vtof.pd \
-						wait.pd
+						wait.pd \
+						fmsynth~.pd
 
 # example patches and related files, in the 'examples' subfolder
 EXAMPLES = bothtogether.pd
