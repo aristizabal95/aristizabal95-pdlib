@@ -22,6 +22,7 @@ PDOBJECTS = balance~.pd \
 						fmsynth~.pd \
 						tri~.pd \
 						vcsg~.pd \
+						nexp~.pd \
 
 # example patches and related files, in the 'examples' subfolder
 EXAMPLES = bothtogether.pd
